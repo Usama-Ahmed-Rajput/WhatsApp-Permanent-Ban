@@ -1,0 +1,69 @@
+body {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #000020;
+      color: #00bfff;
+      overflow: hidden;
+    }
+    .hacker-bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(0deg, #000030, #000030 2px, #000044 2px, #000044 4px);
+      z-index: -1;
+      animation: scroll-bg 2s linear infinite;
+    }
+    @keyframes scroll-bg {
+      from {background-position: 0 0;}
+      to {background-position: 0 -20px;}
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      padding: 20px;
+    }
+    .welcome {
+      font-size: 2em;
+      animation: blink 1s step-end infinite;
+      text-align: center;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    .login-box, .main-buttons {
+      display: none;
+      flex-direction: column;
+      gap: 1.2rem;
+      background: #000033;
+      padding: 1.5rem;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 0 15px #00bfff66;
+    }
+    input {
+      background: #000022;
+      border: 1px solid #00bfff;
+      color: #00bfff;
+      padding: 0.7rem;
+      font-size: 1rem;
+      font-family: inherit;
+      border-radius: 6px;
+    }
+    button {
+      background: #000022;
+      border: 1px solid #00bfff;
+      color: #00bfff;
+      padding: 0.9rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: #001144;
+    }
